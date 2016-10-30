@@ -9,12 +9,19 @@ CSS3动画特效区域
 
 3.兼容性:
 **transform:**
+
 	ie10,firefox,opera支持
+
 	ie9支持-ms-transform（仅支持2d）
+
 	safari和chrome支持-webkit-transform(支持2d和3d)
+
 	opera仅持2d
 	
 **transition:**
+
 	e10,firefox,opera,chrome支持
+
 	safari支持-webkit-transition
+	
 	ie9以及更低版本不支持
