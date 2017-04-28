@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>form</title>
+	<style type="text/css">
+
+		dd,dl,dt,div,body,html,input{
+			margin: 0;
+			padding: 0;
+		}
+
+		.zui-inline{
+			position: relative;
+    		display: inline-block;
+		}
+
+		.zui-input{
+			height: 38px;
+			line-height: 38px;
+			border: 1px solid #e6e6e6;
+			background-color: #fff;
+			border-radius: 2px;
+
+			display: block;
+			width: 100%;
+			padding: 0 10px;
+		}
+
+		.zui-form-selected{
+			display: block;
+		}
+
+		.zui-form-select dl{
+			display: none;
+			position: absolute;
+		    left: 0;
+		    top: 42px;
+		    padding: 5px 0;
+		    z-index: 999;
+		    min-width: 100%;
+		    border: 1px solid #d2d2d2;
+		    max-height: 300px;
+		    overflow-y: auto;
+		    background-color: #fff;
+		    border-radius: 2px;
+		    box-shadow: 0 2px 4px rgba(0,0,0,.12);
+		    box-sizing: border-box;
+		}
+
+		.zui-form-select dl dd, .zui-form-select dl dt{
+		    padding: 0 10px;
+		    line-height: 36px;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		}
+		
+		/*动画类*/
+		.zui-upbit{
+			animation-name: zui-upbit; /*动画名称*/
+			animation-fill-mode: both; /*规定动画在播放之前或之后，其动画效果是否可见 http://www.w3school.com.cn/cssref/pr_animation-fill-mode.asp*/
+			animation-duration:.3s;
+		}
+
+		@keyframes zui-upbit
+		0%{
+			transform: translate3d(0,30px,0);
+    		opacity: .3;
+		}
+
+		100%{
+			transform: translate3d(0,0,0);
+    		opacity: 1;
+		}
+
+
+		/*知识点
+		- tap-highlight-color
+		- @keyframes
+		- animation*/
+
+	</style>
+</head>
+<body>
+
+<!--缺少js的reqired验证-->
+<fieldset>
+	<legend>输入框</legend>
+	<div class="zui-inline">
+		<input type="test" name="title" reqired zui-verify="required" placeholder="请输入标题" autocomplete="off" class="zui-input">
+	</div>
+
+</fieldset>
+
+<fieldset>
+	<legend>下拉选择框</legend>
+	<div class="zui-inline">
+		<select name="city" lay-verify="">
+		  <option value="">请选择一个城市</option>
+		  <option value="010">北京</option>
+		  <option value="021">上海</option>
+		  <option value="0571">杭州</option>
+		</select> 
+	</div>
+
+	<div style="position: relative;" class="zui-form-select">
+		<div class="zui-inline">
+			<input type="test" name="title" reqired zui-verify="required" placeholder="请输入标题" autocomplete="off" class="zui-input">
+		</div>
+		<dl class="zui-anim zui-anim-upbit" style="">
+			<dd lay-value="你工作的第一个城市" class="">你工作的第一个城市</dd>
+			<dd lay-value="你的工号" class="">你的工号</dd>
+			<dd lay-value="你最喜欢的老师" class="">你最喜欢的老师</dd>
+		</dl>
+	</div>
+</fieldset>
+
+
+</body>
+<script type="text/javascript">
+	
+	var showNode = document.getElementById('show');
+	showNode.addEventListener('click',function (e) {
+		
+	})
+
+
+
+
+
+
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+</html>
