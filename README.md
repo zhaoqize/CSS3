@@ -1,5 +1,5 @@
 ## 按钮
-![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/2017-05-02_231427.png)
+![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/button.gif)
 
 ## 表单元素
 - 下拉选择框与复选框
