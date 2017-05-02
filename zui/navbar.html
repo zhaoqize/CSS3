@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>navhtml</title>
+	<style type="text/css">
+		/*reset*/
+		ul,li,dl,dd,body.html{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		/*水平导航*/
+		.zui-nav{
+			position: relative;
+		    padding: 0 20px;
+		    background-color: #393D49;
+		    color: #c2c2c2;
+		    border-radius: 2px;
+		    /*font-size: 0;*/
+		    box-sizing: border-box!important;
+		}
+
+		.zui-nav .zui-nav-item{
+			display: inline-block;
+			position: relative;
+			vertical-align: middle;
+			line-height: 60px;
+		}
+
+		.zui-nav .zui-nav-item a{
+			display: block;
+			padding: 0 20px;
+			color: #c2c2c2;
+			transition: all .3s;
+		}
+
+		.zui-nav .zui-nav-item a:hover{
+			color: #fff;
+		}
+
+		.zui-nav-child {
+			position: absolute;
+		}
+		
+		/*画箭头*/
+		.zui-nav-more {
+			content: '';
+		    width: 0;
+		    height: 0;
+		    border-style: solid dashed dashed;
+		    border-color: #c2c2c2 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+		    overflow: hidden;
+		    cursor: pointer;
+		    transition: all .2s;
+		    position: absolute;
+		    top: 28px;
+		    right: 3px;	
+		    border-width: 6px;
+		}
+
+		.zui-nav-mored {
+			top: 22px;
+		    border-style: dashed dashed solid;
+		    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #c2c2c2;
+		}
+
+		.zui-nav-bar{
+			position: absolute;
+		    left: 0;
+		    top: 0;
+		    width: 0;
+		    height: 5px;
+		    background-color: #5FB878;
+		    transition: all .2s;
+		    -webkit-transition: all .2s;
+		    z-index: 10000;
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+<fieldset id="demo1">
+	<legend>水平导航</legend>
+	<ul class="zui-nav">
+        <li class="zui-nav-item"><a href="">最新活动</a></li>
+        <li class="zui-nav-item zui-this"><a href="">产品</a></li>
+        <li class="zui-nav-item"><a href="">大数据</a></li>
+        <li class="zui-nav-item">
+          <a href="javascript:;">解决方案<span class="zui-nav-more"></span></a>
+          <!-- <dl class="zui-nav-child zui-anim zui-anim-upbit">
+            <dd><a href="">移动模块</a></dd>
+            <dd><a href="">后台模版</a></dd>
+            <dd><a href="">电商平台</a></dd>
+          </dl> -->
+        </li>
+        <li class="zui-nav-item"><a href="">社区</a></li>
+
+        <!--如何巧妙的实现这个效果??-->
+      	<span class="zui-nav-bar" style="left: 0; top: 55px; width: 0; opacity: 0;"></span></ul>
+</fieldset>
+
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript">
+	(function (win, $) {
+
+		// mouseover 与 mouseenter || mouseout 与 mouselenter || mousemove
+
+		var $demo1Node = $('#demo1 .zui-nav-item').eq(3);
+		$demo1Node.mouseenter(function(e) {
+			$(this).find('.zui-nav-more').addClass('zui-nav-mored');
+		})
+		$demo1Node.mouseleave(function(e) {
+			$(this).find('.zui-nav-more').removeClass('zui-nav-mored');
+		})
+
+	 	// 实现下方的绿色条
+	 	// 要获取li的宽度,left的值
+	 	// 使用el.offsetLeft获取距离包含块的左边的距离 el.offsetWidth获取目标元素的宽度
+
+	 	var $li= $('#demo1 .zui-nav-item');
+	 	$li.mouseenter(function(e){
+	 		var navbarWidth = e.currentTarget.offsetWidth;
+	 		var navbarLeft = e.currentTarget.offsetLeft;
+	 		$('.zui-nav-bar').css({'left':navbarLeft+'px','width':navbarWidth+'px','opacity':1})
+	 	})
+
+	})(window, jQuery)
+</script>
+</html>

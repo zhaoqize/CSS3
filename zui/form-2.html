@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form-2</title>
+	<style type="text/css">
+		@font-face {
+			font-family:zui-icon;src:url(./font/iconfont.eot?v=1.0.9);src:url(./font/iconfont.eot?v=1.0.9#iefix) format('embedded-opentype'),url(./font/iconfont.svg?v=1.0.9#iconfont) format('svg'),url(./font/iconfont.woff?v=1.0.9) format('woff'),url(./font/iconfont.ttf?v=1.0.9) format('truetype')
+		}
+
+		.zui-icon {
+			font-family: zui-icon!important;
+			font-size: 16px;
+			font-style: normal;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale
+		}
+
+		/*通用类*/
+		dd,dl,dt,div,span,ul,li,body,html,input{
+			margin: 0;
+			padding: 0;
+		}
+
+		/*开关*/
+		.zui-form-switch {
+			position: relative;
+		    height: 22px;
+		    line-height: 22px;
+		    width: 42px;
+		    padding: 0 5px;
+		    margin-top: 8px;
+		    border: 1px solid #d2d2d2;
+		    border-radius: 20px;
+		    cursor: pointer;
+		    background-color: #fff;
+		    -webkit-transition: .1s linear;
+		    transition: .1s linear;
+		}
+
+		.zui-form-switch em{
+			position: absolute;
+		    right: 5px;
+		    top: 0;
+		    width: 25px;
+		    padding: 0!important;
+		    text-align: center!important;
+		    color: #999!important;
+		    font-style: normal!important;
+    		font-size: 12px;
+		}
+
+		.zui-form-switch i{
+			position: absolute;
+		    left: 5px;
+		    top: 3px;
+		    width: 16px;
+		    height: 16px;
+		    border-radius: 20px;
+		    background-color: #d2d2d2;
+		    -webkit-transition: .1s linear;
+		    transition: .1s linear;
+		}
+		
+		.zui-form-onswitch {
+			border-color: #5FB878;
+    		background-color: #5FB878;
+		}
+
+		.zui-form-onswitch i {
+			left: 32px;
+    		background-color: #fff;
+		}
+
+		.zui-form-onswitch em {
+			left: 5px;
+		    right: auto;
+		    color: #fff!important;
+		}
+
+		/*radio*/
+		.zui-form-radio {
+			line-height: 28px;
+		    margin: 6px 10px 0 0;
+		    padding-right: 10px;
+		    cursor: pointer;
+		    font-size: 0;
+		}
+
+		.zui-form-radio i{
+			line-height: 28px;
+		    margin: 6px 10px 0 0;
+		    padding-right: 10px;
+		    cursor: pointer;
+		    font-size: 0;
+		}
+	</style>
+</head>
+<body>
+
+<!--将i来回移动 并添加过渡动画-->
+<fieldset id="demo1">
+	<legend>开关-1</legend>
+	<div class="zui-form-switch">
+		<em></em>
+		<i></i>
+	</div>
+</fieldset>
+
+<fieldset id="demo2">
+	<legend>开关-2</legend>
+	<div class="zui-form-switch">
+		<em>OFF</em>
+		<i></i>
+	</div>
+</fieldset>
+
+<!--还需要琢磨-->
+<fieldset id="demo3">
+	<legend>单选框</legend>
+	<div class="zui-form-radio">
+		<i class="zui-icon">&#xe63f;</i>
+		<span>男</span>
+	</div>
+</fieldset>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript">
+	(function (win, $) {
+		var $demo1Node = $('#demo1 .zui-form-switch').eq(0);
+		$demo1Node.click(function(e) {
+			$(this).toggleClass('zui-form-onswitch');
+		})
+
+		var $demo2Node = $('#demo2 .zui-form-switch').eq(0);
+		var flag = true;
+		$demo2Node.click(function(e) {
+			$(this).toggleClass('zui-form-onswitch');
+
+			// 还需要改变文字
+			if(flag){
+				$(this).find('em').text('ON');
+				flag = false;
+			}else {
+				$(this).find('em').text('OFF');
+				flag = true;
+			}
+
+			
+		})
+
+	})(window, jQuery)
+</script>
+</html>

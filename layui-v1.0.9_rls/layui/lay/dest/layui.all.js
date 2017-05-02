@@ -6130,7 +6130,7 @@ function(e) {
                 };
                 f.each(function(e, l) {
                     var r = i(this),// 获取select
-                    o = r.next("." + a),
+                    o = r.next("." + a), // 遍历寻找 .layui-form-select的类名
                     u = this.disabled,
                     d = l.value,
                     f = i(l.options[l.selectedIndex]);
