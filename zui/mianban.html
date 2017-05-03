@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>面板</title>
+    <style type="text/css">
+
+        /*reset*/
+        
+        ul,
+        li,
+        dl,
+        dd,
+        body.html {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        h2{
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .zui-collapse {
+            border: 1px solid #e2e2e2;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .zui-colla-title {
+            position: relative;
+            height: 42px;
+            line-height: 42px;
+            padding: 0 15px 0 35px;
+            color: #333;
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+        .zui-colla-content {
+            height: 0;
+            /*padding: 10px 15px;*/
+            line-height: 22px;
+            border-top: 1px solid #e2e2e2;
+            color: #666;
+            transition: all .2s;
+            overflow: hidden;
+        }
+        .zui-colla-item {
+            border-top: 1px solid #e2e2e2;
+        }
+        .zui-colla-item:first-child {
+            border-top: none;
+        }
+
+        .zui-show {
+            height: 50px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <fieldset id="demo1">
+        <legend>面板</legend>
+        <div class="zui-collapse">
+            <div class="zui-colla-item">
+                <h2 class="zui-colla-title">杜甫</h2>
+                <div class="zui-colla-content zui-show">内容区域</div>
+            </div>
+            <div class="zui-colla-item">
+                <h2 class="zui-colla-title">李清照</h2>
+                <div class="zui-colla-content">内容区域</div>
+            </div>
+            <div class="zui-colla-item">
+                <h2 class="zui-colla-title">鲁迅</h2>
+                <div class="zui-colla-content">内容区域</div>
+            </div>
+        </div>
+
+    </fieldset>
+
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript">
+    (function (win, $) {
+
+        // 需要关闭其他区域
+        var $zcol = $('.zui-colla-title');
+        $zcol.click(function (e){
+            // 先删除所有的zui-show类 在赋类
+            $(this).closest('.zui-collapse')
+                    .find('.zui-show')
+                    .removeClass('zui-show');
+            $(this).next('.zui-colla-content')
+                    .addClass('zui-show');
+        })
+
+    })(window, jQuery)
+</script>
+
+</html>
