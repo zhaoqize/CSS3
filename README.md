@@ -12,7 +12,7 @@
 ![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/navhtml.gif)
 
 ## 选项卡
-![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/tab.gif)
+![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/bar.gif)
 
 ## 面板
 ![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/mianban.gif)
