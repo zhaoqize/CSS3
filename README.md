@@ -16,3 +16,8 @@
 
 ## 面板
 ![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/mianban.gif)
+
+## 弹出框
+![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/popup_1.gif)
+
+![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/popup_2.gif)

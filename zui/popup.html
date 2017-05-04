@@ -49,8 +49,8 @@
 			height: 150px;
 			/*border:1px solid #000;*/
 			background-color: #fff;
-			left: 50%;
-		    top: 50%;
+			/*left: 50%;
+		    top: 50%;*/
 		    position: absolute;
 		    /*transform: translate3d(-50%,-50%,0);*/
 		    border-radius: 2px;
@@ -162,6 +162,17 @@
 		$("#demo1").click(function (e) {
 			var $zs = $('.zui-shade');
 			var $zpc = $('.zui-popup-content');
+			var $win = $(window);
+			
+			// 动态设置宽高,避免通过css设置显隐的移动问题，因为有了一个动画时间
+			var winW = $win.width();
+			var winH = $win.height();
+			var elW = $zpc.width();
+			var elH = $zpc.height();
+
+			var offsetW = Number((winW - elW)/2);
+			var offsetH = Number((winH - elH)/2);
+			$zpc.css({'top':offsetH+'px','left':offsetW+'px'});
 
 			$zs.addClass('zui-show');
 			$zpc.addClass('zui-show');
