@@ -159,29 +159,26 @@
 <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
 <script type="text/javascript">
 	(function (win, $) {
+		// 动态设置宽高,避免通过css设置显隐的移动问题，因为有了一个动画时间
+		var $win = $(window);
+		var $zs = $('.zui-shade');
+		var $zpc = $('.zui-popup-content');
+
+		var winW = $win.width();
+		var winH = $win.height();
+		var elW = $zpc.width();
+		var elH = $zpc.height();
+
+		var offsetW = Number((winW - elW)/2);
+		var offsetH = Number((winH - elH)/2);
+		$zpc.css({'top':offsetH+'px','left':offsetW+'px'});
+		
 		$("#demo1").click(function (e) {
-			var $zs = $('.zui-shade');
-			var $zpc = $('.zui-popup-content');
-			var $win = $(window);
-			
-			// 动态设置宽高,避免通过css设置显隐的移动问题，因为有了一个动画时间
-			var winW = $win.width();
-			var winH = $win.height();
-			var elW = $zpc.width();
-			var elH = $zpc.height();
-
-			var offsetW = Number((winW - elW)/2);
-			var offsetH = Number((winH - elH)/2);
-			$zpc.css({'top':offsetH+'px','left':offsetW+'px'});
-
 			$zs.addClass('zui-show');
 			$zpc.addClass('zui-show');
 		});
 
 		$('.zui-popup-btn0').click(function(e){
-			var $zs = $('.zui-shade');
-			var $zpc = $('.zui-popup-content');
-
 			$zs.removeClass('zui-show');
 			$zpc.removeClass('zui-show');
 		})
