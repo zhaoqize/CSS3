@@ -21,3 +21,6 @@
 ![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/popup_1.gif)
 
 ![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/popup_2.gif)
+
+## tips
+这里是错误信息,将要被回滚掉
