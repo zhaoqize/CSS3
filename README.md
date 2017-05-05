@@ -6,7 +6,7 @@
 ![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/form1.gif)
 
 - 开关
-![](https://github.com/zhaoqize/ZUI/tree/master/zui/images)
+![](https://github.com/zhaoqize/ZUI/tree/master/zui/images.gif)
 
 ## 导航条
 ![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/navhtml.gif)
