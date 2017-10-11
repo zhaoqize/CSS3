@@ -1,3 +1,5 @@
+**class的组合规则**
+原则：统一的样式与特殊的样式分离
 ## 按钮
 ![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/button.gif)
 
