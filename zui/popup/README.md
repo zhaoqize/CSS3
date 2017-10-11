@@ -1,4 +1,4 @@
-## 导航菜单
+## 弹出框
 **dom结构**
 ![dom](../images/navbar.png)
 
