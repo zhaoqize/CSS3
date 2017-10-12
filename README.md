@@ -1,5 +1,9 @@
 **class的组合规则**
+
 原则：统一的样式与特殊的样式分离
+
+> class的子元素的和伪类的妙用
+
 ## 按钮
 ![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/button.gif)
 
