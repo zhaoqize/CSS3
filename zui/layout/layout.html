@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>布局</title>
+    <meta charset="UTF-8">
+    <style>
+      html,body {
+        width: 100%;
+      }
+      * {
+        margin:0;
+        padding: 0;
+      }
+      .zui-col {
+        background-color: #6B6464;
+        color: white;
+      }
+      .zui-col-24 {
+        width: 100%;
+      }
+      .zui-col-12 {
+        width: 50%;
+        float: left;
+      }
+      .zui-col-8 {
+        width: 33.3333%;
+        float: left;
+      }
+      .zui-col-6 {
+        width: 25%;
+        float: left;
+      }
+      .zui-col-4 {
+        width: 16.66667%;
+        float: left;
+      }
+
+
+      .zui-row:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+        overflow: hidden;
+        *zoom:1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="zui-row">
+      <div class="zui-col zui-col-24">100%</div>
+    </div>
+    <br>
+    <div class="zui-row">
+        <div class="zui-col zui-col-12">50%</div>
+        <div class="zui-col zui-col-12">50%</div>
+    </div>
+    <br>
+    <div class="zui-row">
+        <div class="zui-col zui-col-8">33.3333%</div>
+        <div class="zui-col zui-col-8">33.3333%</div>
+        <div class="zui-col zui-col-8">33.3333%</div>
+    </div>
+    <br>
+    <div class="zui-row">
+        <div class="zui-col zui-col-6">25%</div>
+        <div class="zui-col zui-col-6">25%</div>
+        <div class="zui-col zui-col-6">25%</div>
+        <div class="zui-col zui-col-6">25%</div>
+    </div>
+    <br>
+    <div class="zui-row">
+        <div class="zui-col zui-col-4">16.66667%</div>
+        <div class="zui-col zui-col-4">16.66667%</div>
+        <div class="zui-col zui-col-4">16.66667%</div>
+        <div class="zui-col zui-col-4">16.66667%</div>
+        <div class="zui-col zui-col-4">16.66667%</div>
+        <div class="zui-col zui-col-4">16.66667%</div>
+    </div>
+  </body>
+</html>

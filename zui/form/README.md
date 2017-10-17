@@ -55,3 +55,19 @@
 - `i`标签作圆形容器
 - `em`做为文字NO/OFF的容器
 - 每次点击的时候，通过移除/添加class，改变展示效果，每次点击修改class，左右移动`em`和`i`
+
+## 单选框
+**效果图**
+![dom](../images/radio.png)
+
+**dom结构**
+![dom](../images/input-radio.png)
+
+**思路**
+- 全部采用dom绘制
+- `zui-radio-inner` 做圆形，用伪类做白色圈
+- label中如果包含input，那就会被点击中`<label><input type="radio"></label>`
+- `cursor: not-allowed`实现不可选
+
+**问题**
+- 如何实现单选（JS控制）

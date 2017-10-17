@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>input-radio</title>
+  <style type="text/css">
+    /* 大基调：容器限定内部元素的展现样式 */
+		.zui-radio {
+      color: #1f2d3d;
+      position: relative;
+      cursor: pointer;
+      display: inline-block;
+      white-space: nowrap;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+    .zui-radio-input {
+      white-space: nowrap;
+      cursor: pointer;
+      outline: none;
+      display: inline-block;
+      line-height: 1;
+      position: relative;
+      vertical-align: middle;
+    }
+
+    .zui-radio-inner {
+      border: 1px solid #bfcbd9;
+      border-radius: 100%;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: #fff;
+      position: relative;
+      cursor: pointer;
+      display: inline-block;
+      box-sizing: border-box;
+    }
+
+    .zui-radio-inner:after {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #fff;
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%) scale(0);
+        transition: transform .15s cubic-bezier(.71,-.46,.88,.6);
+    }
+
+    .zui-radio-input.is-checked .zui-radio-inner:after {
+      transform: translate(-50%,-50%) scale(1);
+    }
+
+    .zui-radio-input.is-checked .zui-radio-inner {
+      border-color: #20a0ff;
+      background: #20a0ff;
+    }
+
+    .zui-radio-label {
+      font-size: 14px;
+      padding-left: 5px;
+    }
+	</style>
+</head>
+<body>
+  <fieldset>
+    <legend>单选框</legend>
+    <div>
+
+        <label class="zui-radio radio">
+          <!--第一部分：做勾选圆形-->
+          <span class="zui-radio-input is-checked">
+            <span class="zui-radio-inner">
+              <!--用伪类做白色圆圈-->
+            </span>
+            <input type="radio" class="zui-radio-original" value="1" hidden>
+          </span>
+          <!--第二部分: label-->
+          <span class="zui-radio-label">备选项</span>
+        </label>
+
+        <label class="zui-radio radio">
+          <span class="zui-radio-input">
+            <span class="zui-radio-inner"></span>
+            <input type="radio" class="zui-radio-original" value="2" hidden>
+          </span><span class="zui-radio-label">备选项</span>
+        </label>
+    </div>
+  </fieldset>
+
+</body> 
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript">
+	(function (win, $) {
+	
+
+	})(window, jQuery)
+</script>
+</html>
