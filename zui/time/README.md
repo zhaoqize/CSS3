@@ -4,6 +4,8 @@
 
 **dom结构**
 ![dom](../images/time-picker.png)
+![dom](../images/time-picker.png =100x100)
+<img src="../images/time-picker.png" width = "300" height = "200" alt="图片名称" align=center />
 
 **思路**
 - 效果移入input区域，右侧文字(图标)变化，border变色(不要使用outline来做)
