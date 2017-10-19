@@ -60,6 +60,23 @@
       color: #bfcbd9;
       transition: all .3s;
     }
+    .zui-picker-panel {
+      position: absolute;
+      transition: all 0.5s;
+      color: #48576a;
+      box-shadow: 0 2px 6px #ccc;
+      background: #fff;
+      line-height: 20px;
+      overflow: hidden;
+    }
+    .zui-time-select-item {
+      padding: 5px;
+      font-size: 14px;
+    }
+    .zui-time-select-item:hover {
+      background-color: #e4e8f1;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -68,9 +85,14 @@
       <input autocomplete="off" placeholder="选择时间" type="text" class="zui-input-inner">
       <i class="zui-date-icon zui-date-time"></i>
     </div>
-  <div class="zui-picker-panel">
+  <div class="zui-picker-panel" style="display:none;height:0">
     <div class="zui-scroll">
-      
+      <div class="zui-time-select-item">08:30</div>
+      <div class="zui-time-select-item">08:45</div>
+      <div class="zui-time-select-item">09:00</div>
+      <div class="zui-time-select-item">09:15</div>
+      <div class="zui-time-select-item">09:45</div>
+      <div class="zui-time-select-item">10:00</div>
     </div>
   </div>
 
@@ -88,10 +110,36 @@
           .removeClass('zui-date-close')
           .addClass('zui-date-time')
     })
+    
+    var $offset = $('.zui-date').offset()
+    $('.zui-input-inner').focus(function() {
+      $('.zui-picker-panel')
+        .css('display', 'block')
+        // 设置panel的宽高
+        .css('width', $('.zui-date').width())
+        .css('height', '200px')
+        // 设置panel的位置
+        .css('top', $offset.top + 36 + 'px')
+        .css('left', $offset.left + 'px')
+    }).blur(function(){
+      // 方法一:通过这种low的方式处理panel的点击问题
+      // 方法二:不用blur,使用手动控制
+      setTimeout(function(){
+        $('.zui-picker-panel')
+        .css('height', '0')
+      },100)
+    })
 
+    $('.zui-scroll').click(function(e){
+      console.log(e)
+        $('.zui-input-inner').val(e.target.textContent);
+    })
+
+    // 清除
     $('.zui-date-time').click(function(){
       $('.zui-input-inner').val('');
     })
+
 
 
 
