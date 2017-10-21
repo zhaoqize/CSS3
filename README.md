@@ -9,10 +9,10 @@
 ![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/form1.gif)
 
 - 开关
-![](https://github.com/zhaoqize/ZUI/tree/master/zui/images/switch.gif)
+![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/switch.gif)
 
 ## 单选
-![](https://github.com/zhaoqize/ZUI/tree/master/zui/images/radio.png)
+![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/radio.png)
 
 ## 导航条
 ![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/navhtml.gif)
