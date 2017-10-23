@@ -1,4 +1,9 @@
 ## class的命名
+**class的组合规则**
+
+原则：统一的样式与特殊的样式分离
+
+> class的子元素的和伪类的妙用
 - 命名形式：zui-btn-primary [ui名称+html元素+属性/皮肤]
 	- zui-form-select -> zui-form-selected
 	- zui-form-checkbox
@@ -42,3 +47,4 @@ CSS3动画特效区域
 	
 	ie9以及更低版本不支持
 
+## 一些技巧
