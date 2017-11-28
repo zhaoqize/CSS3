@@ -28,5 +28,3 @@
 
 ## 时间选择
 ![](https://github.com/zhaoqize/ZUI/blob/master/zui/images/time-picker.gif)
-
-## 消息提示
